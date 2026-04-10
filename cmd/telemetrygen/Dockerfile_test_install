@@ -1,0 +1,4 @@
+FROM golang
+
+ARG COMMIT_SHA=latest
+RUN go install github.com/kb-newrelic/opentelemetry-collector-contrib/cmd/telemetrygen@${COMMIT_SHA}
